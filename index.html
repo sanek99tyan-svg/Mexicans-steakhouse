@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MEXICANA — Fire • Steak • Grill</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+<div class="transition" id="transition"></div>
+<header class="header page" style="padding-bottom:0">
+ <div class="left"><span class="table-pill">TABLE 08</span></div>
+ <a class="logo" href="index.html">MEXI<b>CANA</b></a>
+ <div class="right"><a class="circle" href="kitchen.html" title="Kitchen">K</a><a class="circle" href="admin.html" title="Admin">A</a><button class="circle" id="cartBtn">🛒</button></div>
+</header>
+<main class="page">
+ <section class="hero">
+  <div class="hero-bg"></div><div class="heat"></div>
+  <div class="hero-copy">
+   <div class="kicker">FIRE • STEAK • GRILL</div>
+   <h1>MEXI<br>CANA</h1>
+   <p>Prime cuts, hard sear and open fire. A steakhouse experience built around heat, smoke and time.</p>
+   <div class="hero-actions"><button class="primary" id="menuJump">Explore menu</button><button class="secondary" id="myOrdersBtn">My orders</button></div>
+  </div>
+  <div class="hero-orbit">CHARCOAL • PRIME • FIRE •</div>
+  <div class="hero-notes"><strong>350°C</strong><span>LIVE FIRE / OPEN GRILL</span></div>
+ </section>
+
+ <section id="menu">
+  <div class="section-head"><div><div class="kicker">OUR MENU / 2026</div><h2>Fresh from the fire.</h2></div><p>Choose your cut, doneness and special requests. The order goes straight to the kitchen display.</p></div>
+  <div class="tabs" id="tabs"></div>
+  <div id="feature"></div>
+  <div class="menu-grid" id="grid"></div>
+ </section>
+
+ <section class="story">
+  <div class="kicker" style="color:#2c2116">MEXICANA / FIRE KITCHEN</div>
+  <h2>Heat makes<br>the difference.</h2>
+  <p>We sear hard, rest patiently and finish every steak over live fire. The result is a deep crust, a juicy center and the unmistakable aroma of smoke.</p>
+ </section>
+</main>
+
+<div class="cart-float hidden" id="cartFloat"><div><small id="cartCount">0 items</small><br><strong id="cartFloatTotal">$0</strong></div><button id="viewCart">View order →</button></div>
+<div class="overlay" id="overlay"></div>
+
+<aside class="drawer" id="cartDrawer">
+ <div class="drawer-head"><div><div class="kicker">TABLE ORDER</div><h2>Your order</h2></div><button class="x" data-close>×</button></div>
+ <div class="drawer-body" id="cartList"></div>
+ <div class="drawer-foot"><div class="total"><span>Total</span><strong id="cartTotal">$0</strong></div><button class="primary wide" id="checkoutBtn">Continue</button></div>
+</aside>
+<aside class="drawer" id="ordersDrawer">
+ <div class="drawer-head"><div><div class="kicker">LIVE STATUS</div><h2>My orders</h2></div><button class="x" data-close>×</button></div>
+ <div class="drawer-body" id="ordersList"></div>
+</aside>
+
+<section class="modal" id="modal">
+ <button class="x" data-close style="position:absolute;right:14px;top:14px;z-index:5;background:#f7f1e7;color:#111">×</button>
+ <div class="detail">
+  <div class="detail-photo"><img id="dimg"></div>
+  <div class="detail-info">
+   <div class="kicker" id="dbadge"></div><h2 id="dname"></h2><div class="price" id="dprice"></div><p id="ddesc"></p>
+   <div id="cookWrap"><div class="kicker" style="margin-top:20px">DONENESS</div><div class="cook" id="cook"></div></div>
+   <div class="field"><label>Special request</label><textarea id="dnote" placeholder="No salt, sauce on side..."></textarea></div>
+   <button class="primary wide" id="addDetail">Add to order</button>
+  </div>
+ </div>
+</section>
+
+<section class="checkout" id="checkout">
+ <div class="checkout-grid">
+  <div class="checkout-left"><div class="kicker">ORDER REVIEW</div><h2>Ready<br>to fire.</h2><div id="summary"></div><div class="receipt" id="receipt"></div></div>
+  <div class="checkout-right">
+   <div class="field"><label>Table</label><input id="table" value="08"></div>
+   <div class="field"><label>Guest name</label><input id="guest" placeholder="Optional"></div>
+   <div class="field"><label>Order note</label><textarea id="orderNote" placeholder="Allergy, birthday, timing request..."></textarea></div>
+   <div style="display:flex;gap:9px;margin-top:18px"><button class="secondary" id="checkoutBack">Back</button><button class="primary" id="place">Send to kitchen</button></div>
+  </div>
+ </div>
+</section>
+<div class="toast" id="toast"></div>
+<script src="data.js"></script><script src="app.js"></script>
+</body></html>
